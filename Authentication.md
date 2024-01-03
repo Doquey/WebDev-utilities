@@ -16,3 +16,10 @@ export default authMiddleware({
 export const config = {
   matcher: ["/((?!.+\\.[\\w]+$|_next).*)", "/", "/(api|trpc)(.*)"],
 };
+
+
+## Can use a the UserButton to let the user logout easily and manage their account as well.
+
+import { UserButton } from "@clerk/nextjs";
+
+<UserButton afterSignOutUrl="/"> 

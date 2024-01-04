@@ -25,6 +25,21 @@ import { UserButton } from "@clerk/nextjs";
 <UserButton afterSignOutUrl="/"> 
 
 
+## After this we have almost everything setup, now we just need some more information to place on the .env file so that our clerk api knows where to look for our login page and the for the logout page. In summary we need to define in which route our login and logout pages are going to be set.
+
+
+```
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_ZmFzdC1tYW50aXMtNzUuY2xlcmsuYWNjb3VudHMuZGV2JA
+CLERK_SECRET_KEY=sk_test_hnYnuVNgMUmt6oEYR6AjExYpOAT2bCBel0FE8hH2Ku
+NEXT_PUBLIC_CLERK_SIGN_IN_URL =/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL =/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL =/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL =/
+
+```
+
+
+
 ## Verifying if a user is signed in:
 
 

@@ -37,6 +37,30 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL =/
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL =/
 
 ```
+Then we have some other things that must be done in order to set the sign-in and sign-up routes, such as create a folder in this structure for each one of them:
+
+app/sign-up/in/[[...sign-up/in]]/page.tsx
+
+and then copy the code in here for each of them:  https://clerk.com/docs/references/nextjs/custom-signup-signin-pages
+
+Then to center up the signup and sign in pages I can just do this :
+
+
+```
+import { SignUp } from "@clerk/nextjs";
+
+export default function Page() {
+  return (
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <SignUp />
+    </div>
+  );
+}
+
+
+```
+
+
 
 
 

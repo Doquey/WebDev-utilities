@@ -23,3 +23,15 @@ export const config = {
 import { UserButton } from "@clerk/nextjs";
 
 <UserButton afterSignOutUrl="/"> 
+
+
+## Verifying if a user is signed in:
+
+
+```
+import { auth } from '@clerk/nextjs';
+ 
+export default function Page() {
+const { userId } : { userId: string | null } = auth();
+```
+

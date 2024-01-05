@@ -4,7 +4,7 @@
   ``` npm install react-dropzone ```
 - This is the code then to build the component:
 
-  ```
+```
 "use client";
 
 import React from "react";
@@ -38,5 +38,5 @@ const FileUpload = () => {
 
 export default FileUpload;
 
-  ```
+```
   

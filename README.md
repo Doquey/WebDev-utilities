@@ -17,3 +17,9 @@ import * as dotenv from "dotenv";
 dotenv.config({ path: ".env" });
 
 ```
+
+## If my component is a client-interacting component, like I click a button and something happens in the page, then I need to place:
+
+'use client' 
+
+at the top of the component file.

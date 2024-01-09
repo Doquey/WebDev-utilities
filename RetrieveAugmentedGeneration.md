@@ -10,3 +10,4 @@
 - Save the embeddings into pineconedb(a database host specialized in storing vectors)
 - Then do a similarity search with any question the use may pass in and retrieve the most embedding with the most similar semantic.
 - Use this embedding as context for the prompt to the LLM.
+Note: We need to actually retrieve the metadata of the document(its text for example) and then we feed it to chatgpt or any other llm

@@ -40,3 +40,21 @@ export default FileUpload;
 
 ```
   
+## After I have setup my AWS s3 bucket and the s3.ts file that will be responsable to interact with it. I can now pass in the uploadfile function inside this s3 file to upload the files managed by this component to the s3 bucket on the amazon cloud:
+
+```
+onDrop: async (acceptedFiles) => {
+      const file = acceptedFiles[0];
+      if (file.size > 10 * 1024 * 1024) {
+        alert("please upload a smaller file");
+        return;
+      }
+      try {
+        const data = await uploadToS3(file);
+        console.log("data", data);
+      } catch (error) {
+        console.log(error);
+      }
+},
+
+```

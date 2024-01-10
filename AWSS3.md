@@ -77,4 +77,48 @@ We also need the name of our bucket to create the s3 object that we'll be using 
 
 NEXT_PUBLIC_S3_BUCKET_NAME
 
+## How to download and read a file from S3:
+
+- Create a file under lib(it seems all of our utils goes under the lib folder) with following code:
+
+
+```
+import AWS from "aws-sdk";
+
+import fs from "fs";
+
+export async function downloadFromS3(file_key: string) {
+  try {
+    AWS.config.update({
+      accessKeyId: process.env.NEXT_PUBLIC_S3_ACESS_KEY_ID!,
+      secretAccessKey: process.env.NEXT_PUBLIC_S3_SECRET_ACCESS_KEY!,
+    });
+    const s3 = new AWS.S3({
+      params: {
+        Bucket: process.env.NEXT_PUBLIC_S3_BUCKET_NAME,
+      },
+      region: "as-east-1",
+    });
+    const params = {
+      Bucket: process.env.NEXT_PUBLIC_S3_BUCKET_NAME!,
+      Key: file_key,
+    };
+
+    const object = await s3.getObject(params).promise();
+    const file_name = `tmp/pdf-${Date.now()}.pdf`;
+
+    fs.writeFileSync(file_name, object.Body as Buffer);
+
+    return file_name;
+  } catch (error) {
+    console.log("There has been an error downloading the file from aws");
+    return null;
+  }
+}
+
+```
+
+
+
+
 

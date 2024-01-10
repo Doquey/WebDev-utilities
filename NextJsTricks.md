@@ -15,3 +15,14 @@
 
 </div>
 ```
+
+## To use the next router I can do :
+
+```
+import { useRouter } from "next/navigation";
+
+const router = useRouter();
+
+router.push("my_route/my_app")
+
+```

@@ -8,7 +8,7 @@
      uncheck block all public acess
      versionamento de bucket desabilitado
      
-- choose sao paulo (as-east-1)
+- choose sao paulo (sa-east-1)
 - Now we need to modify the permission for the objects, because so far all of them can be public:
 - Click on the new bucket
 - Go to permissions

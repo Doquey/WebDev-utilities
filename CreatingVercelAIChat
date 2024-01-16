@@ -1,0 +1,9 @@
+# Just install the package:
+
+```
+npm install ai
+npx shadcn-ui@latest add input
+```
+
+then this is the code to mont the component:
+

@@ -15,6 +15,7 @@ export const stripe = new Stripe(process.env.STRIPE_API_KEY as string, {
 ```
 ## to get the API_KEY I can go to stripe and "criar conta", then "desenvolvedores" and api keys.(get the secret key)
 
+## to setup a testing enviroment for my project on stripe I can follow this here : https://dashboard.stripe.com/test/webhooks/create?endpoint_location=local
 
 
 
